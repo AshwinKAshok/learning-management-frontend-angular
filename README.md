@@ -4,7 +4,7 @@ This is the frontend implementation for the project "Course-management". It is i
 using AngularJS. It is an attempt to learn AngularJS by trying to implement all
 the frontend UI features using that the React based frontend client of this project has.
 
-The React and Redux based frontend client of this project can be found [here]().
+The React and Redux based frontend client of this project can be found [here](https://github.com/AshwinKAshok/learning-management-frontend-react).
 
 # What it does?
 
@@ -24,11 +24,11 @@ However, due to the consistency of API structure across 2 different
  
 ### Tech stacks used:
 * ### Frontend:
-    * React and redux based frontend can be found [here]().
+    * React and redux based frontend can be found [here](https://github.com/AshwinKAshok/learning-management-frontend-react).
     * AngularJS based frontend. It is this repo.
 * ### Backend:
-    * Backend using Spring boot and AWS RDS for database can be found [here]().
-    * Backend using NodeJS and MongoDB for database can be found [here]().
+    * Backend using Spring boot and AWS RDS for database can be found [here](https://github.com/AshwinKAshok/learning-management-backend-spring).
+    * Backend using NodeJS and MongoDB for database can be found [here](https://github.com/AshwinKAshok/learning-management-backend-node).
 
 ## Development server
 
