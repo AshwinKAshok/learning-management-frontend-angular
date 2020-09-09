@@ -6,6 +6,14 @@ the frontend UI features using that the React based frontend client of this proj
 
 The React and Redux based frontend client of this project can be found [here]().
 
+# What it does?
+
+The Angular client provides the frontend features to:
+
+* Add/remove/update courses
+* Add/remove/update Lessons under courses
+* Add/remove/update modules under lessons
+
 # Different parts of this project
 
 This project was used as a way to learn different tech stacks. The frontend
