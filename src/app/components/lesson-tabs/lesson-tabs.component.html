@@ -1,0 +1,12 @@
+<ul class="nav nav-tabs" >
+  <div *ngFor="let lesson of lessonList">
+    <li class="nav-item" >
+      <a class="nav-link "
+         [class] = "{'active': lessonId === lesson._id}"
+         routerLink="/layout/courses/{{ courseId }}/modules/{{moduleId}}/lessons/{{lesson._id}}/topics"
+      >
+        {{ lesson.lesson }}
+      </a>
+    </li>
+  </div>
+</ul>

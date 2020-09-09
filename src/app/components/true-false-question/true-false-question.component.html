@@ -1,0 +1,59 @@
+<p class="wbdv-header">{{question.question}}
+  <span [hidden]="!(submitted && question.correct=== answer)">
+    <fa-icon [icon]="faCheck" [ngStyle]="{color: 'green'}"></fa-icon>
+</span>
+
+  <span [hidden]="!(submitted && question.correct!== answer)">
+  <fa-icon [icon]="faTimes" [ngStyle]="{color: 'red'}"></fa-icon>
+</span>
+
+</p>
+
+<ul class="wbdv-list">
+  <li class="list-group-item" [ngClass]="{'wbdv-success': submitted && question.correct === 'true','wbdv-fail': submitted && question.correct !== 'true' && answer==='true'}">
+    <label>
+      <input type="radio"
+             value="true"
+             [(ngModel)]="answer"
+             name="{{question._id}}"/>
+      True
+
+      <fa-icon [hidden]=" !(submitted && question.correct==='true' && answer==='true')"
+               [icon]="faCheck" [ngStyle]="{color: 'green'}"></fa-icon>
+      <fa-icon [hidden]=" !(submitted && question.correct==='true' && answer==='false')"
+               [icon]="faCheck" [ngStyle]="{color: 'green'}"></fa-icon>
+      <fa-icon [hidden]=" !(submitted && question.correct==='false' && answer==='true')"
+               [icon]="faTimes" [ngStyle]="{color: 'red'}"></fa-icon>
+    </label>
+  </li>
+
+  <li class="list-group-item" [ngClass]="{'wbdv-success': submitted && question.correct === 'false','wbdv-fail': submitted && question.correct !== 'false' && answer === 'false'}">
+    <label>
+      <input type="radio"
+             value="false"
+             [(ngModel)]="answer"
+             name="{{question._id}}"/>
+      False
+
+      <fa-icon [hidden]=" !(submitted && question.correct==='false' && answer==='false')"
+               [icon]="faCheck" [ngStyle]="{color: 'green'}"></fa-icon>
+
+      <fa-icon [hidden]=" !(submitted && question.correct==='false' && answer==='true')"
+               [icon]="faCheck" [ngStyle]="{color: 'green'}"></fa-icon>
+
+      <fa-icon [hidden]=" !(submitted && question.correct==='true' && answer==='false')"
+               [icon]="faTimes" [ngStyle]="{color: 'red'}"></fa-icon>
+    </label>
+  </li>
+</ul>
+
+<br/>
+Your answer: {{answer}}
+<br/>
+
+
+<div type="button" class="btn btn-success" (click)="submitAnswer()" >Grade</div>
+
+
+
+

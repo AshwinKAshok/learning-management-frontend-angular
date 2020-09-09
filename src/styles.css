@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+.wbdv-bg-main {
+  background: lightgray;
+  height: 100vh;
+}
+
+.wbdv-course-table-component {
+  background: white;
+  padding: 1em;
+}
+
+.wbdv-module-component {
+  background: white;
+  margin: 0;
+  padding-bottom: 1em;
+}
+
+.wbdv-lesson-component {
+  margin-top: 3em;
+}
+
+.wbdv-topic-component {
+  margin: 0em;
+}
+
+.wbdv-success {
+  background: mediumseagreen;
+}
+
+.wbdv-fail {
+  background: palevioletred;
+}
+
+.wbdv-list{
+  padding-left: 0;
+}
+
+.wbdv-header {
+  font-size: 1.3em;
+  font-family: "Times New Roman";
+  font-weight: bold;
+}
+
+@media (max-width: 575.98px) {
+  .wbdv-module-component {
+    margin-top: 1em;
+  }
+}
+

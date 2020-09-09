@@ -1,0 +1,18 @@
+<ul class="list-group wbdv-course-table-component">
+  <li class="list-group-item"><h4>Courses</h4></li>
+  <div *ngFor="let course of courses">
+    <li class="list-group-item"
+        [class]="{'active': courseId === course._id}"
+        routerLink="/layout/courses/{{course._id}}/modules">
+      {{ course.courseTitle }}
+      <a class="float-right"
+         href="/courses/{{course._id}}/quizzes">
+        Quizzes
+      </a>
+    </li>
+  </div>
+</ul>
+
+
+
+

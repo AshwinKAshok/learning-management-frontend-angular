@@ -1,0 +1,38 @@
+<p class="wbdv-header">{{question.question}}
+  <span [hidden]="!(submitted && question.correct=== answer)">
+    <fa-icon [icon]="faCheck" [ngStyle]="{color: 'green'}"></fa-icon>
+</span>
+
+  <span [hidden]="!(submitted && question.correct!== answer)">
+  <fa-icon [icon]="faTimes" [ngStyle]="{color: 'red'}"></fa-icon>
+</span>
+</p>
+
+
+<ul class="wbdv-list">
+  <li *ngFor="let choice of question.choices " class="list-group-item" [ngClass]="{'wbdv-success': submitted && question.correct === choice,'wbdv-fail': submitted && question.correct !== choice && answer===choice}">
+    <label >
+      <input type="radio"
+             value="{{choice}}"
+             [(ngModel)]="answer"
+             name="{{question._id}}"/>
+      {{choice}}
+
+      <fa-icon [hidden]=" !(submitted && question.correct===choice && answer===choice)"
+               [icon]="faCheck" [ngStyle]="{color: 'green'}"></fa-icon>
+
+      <fa-icon [hidden]=" !(submitted && question.correct===choice && answer!==choice)"
+               [icon]="faCheck" [ngStyle]="{color: 'green'}"></fa-icon>
+
+      <fa-icon [hidden]=" !(submitted && question.correct!==choice && answer===choice)"
+               [icon]="faTimes" [ngStyle]="{color: 'red'}"></fa-icon>
+    </label>
+  </li>
+
+</ul>
+
+<br/>
+Your answer: {{answer}}
+<br/>
+
+<div type="button" class="btn btn-success" (click)="submitAnswer()" >Grade</div>
